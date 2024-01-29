@@ -56,7 +56,7 @@ export default function App() {
   const [watched, setWatched] = useState([]);
   const [isLoading, setIsLoading] = useState(false);
   const [error, setError] = useState("");
-  const query = "interstellar";
+  const query = "kjdlsjalkdslak";
 
   // async function loadingAsyncFunc(asyncCallback) {
   //   setIsLoading(true);
@@ -83,7 +83,10 @@ export default function App() {
           throw new Error("Something went wrong with fetching movies...");
 
         const data = await res.json();
+        if (data.Response === "False") throw new Error("Movie not found");
+
         setMovies(data.Search);
+        console.log(data);
       } catch (err) {
         console.error(err.message);
         setError(err.message);
