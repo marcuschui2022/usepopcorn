@@ -2,7 +2,7 @@
 
 https://marcuschui2022.github.io/usepopcorn/
 
-# Practice Project: Thinking in React - Components, Composition, and Reusability
+# Practice Project: Thinking in React - Components, Composition, Reusability, Effect and Data Fetching 
 
 This practice project is designed around "Thinking in React: Components, Composition, and Reusability". It was initially
 setup with [Create React App](https://github.com/facebook/create-react-app).
