@@ -204,7 +204,6 @@ function MovieDetails({ selectedId, onCloseMovie, onAddWatched, watched }) {
   const [movie, setMovie] = useState({});
   const [isLoading, setIsLoading] = useState(false);
   const [userRating, setUserRating] = useState("");
-
   const isWatched = watched.map((movie) => movie.imdbID).includes(selectedId);
   const watchedUserRatting = watched.find(
     (movie) => movie.imdbID === selectedId,
@@ -255,6 +254,10 @@ function MovieDetails({ selectedId, onCloseMovie, onAddWatched, watched }) {
   useEffect(() => {
     if (!title) return;
     document.title = `Movie | ${title}`;
+
+    return function () {
+      document.title = "usePopcorn";
+    };
   }, [title]);
 
   return (
